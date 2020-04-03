@@ -5,6 +5,14 @@
     // init Branch
    branch.init('key_live_gbJlHTS814kqnJxhgFYcmhkdADm60izV', function(err, data) {
   console.log(err, data);
+    
+   branch.setBranchViewData({
+    data: {
+        'deeplink': 'type=category&position=2',
+        'picture_id': '12345',
+        'user_id': '45123'
+    }
+});
 });
   </script>
 <body>
