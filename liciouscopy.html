@@ -1,0 +1,2185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      dataLayer = [];
+      branch_data  = null;
+    </script>
+    <script>
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        branch.init('key_live_gbJlHTS814kqnJxhgFYcmhkdADm60izV', function(err, res) {
+            if(err === null){
+                console.log({branch:res})
+                if(res !== null && res.data_parsed !== null && res.data_parsed.hasOwnProperty('custom_object') && res.data_parsed.custom_object !== null){
+                    branch_data = res.data_parsed.custom_object
+                }
+                // if(res !== null && res.data_parsed !== null){
+                //     branch_data = res.data_parsed
+                // }
+            }
+
+        })
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVBCJN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="sD2jzT_iDKAT8ujkwjoFv8YJI9CUcQCmL3W18Aez4G4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c2b7075667",applicationID:"194347271"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <META http-equiv="Expires" content="-1">
+    <meta name="_token" content="oTsTTqgxsnTkJ33mbhFZ4C0dJVa75cPwTLWhnIHI"/>
+    <meta name="url">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="google-site-verification" content="fU46uqzJ-ckaIWHrdh3V6GrinuN4hh9AQxghvlqI_N8" />
+    <!-- Google Tag Manager -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.css"
+          rel="stylesheet">
+
+    <!-- <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KVBCJN')
+    </script> -->
+    <!-- webengage -->
+    <script id="_webengage_script_tag" type="text/javascript">
+        var webengage; !function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="feedback survey notification".split(z),c="options render clear abort".split(z),p="Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i<l.length;i++)o(r,[l[i]]);for(i=0;i<a.length;i++){for(r[a[i]]={},s=0;s<c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s<p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i<u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://ssl.widgets.webengage.com":"http://cdn.widgets.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");
+
+        webengage.init('~2024b286');
+    </script>
+    <!-- client.js script-->
+    <script type="text/javascript" src="/js/client.min.js"></script>     
+    <!-- webengage -->
+    <!--Branch IO-->
+    
+    
+    <!--Branch IO-->
+    <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+    <!-- End Google Tag Manager  -->
+    <!--FaceBook Pixel-->
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '161822374181032');
+        fbq('track', "PageView");
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=161822374181032&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- FaceBook Pixel End -->
+    <script type="text/javascript">
+        var clevertap = {event: [], profile: [], account: [], onUserLogin: [], notifications: []};
+        // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+        clevertap.account.push({"id": "445-488-5W5Z"});
+        (function () {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.async = true;
+            wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+        })();
+    </script>
+    
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css?v=7380db0b318"/>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-76702320-2', 'auto');
+        ga('require', 'ecommerce');
+        ga('send', 'pageview');
+
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <title>    Buy meat online |Shop for tender and fresh meat online | Licious.in
+</title>
+      <link rel="canonical" href="https://www.licious.in/">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700&display=swap" rel="stylesheet">
+  </head>
+<body>
+<!-- Google Tag Manager (noscript)  -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBCJN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- <link rel="stylesheet" href="/css/frame/login.css"/> -->
+<div class="login-container">
+  <div class="login-error-msg">Invalid Password</div>
+  <div class="popup_cancel"><img src="/images/login_cross.png"></div>
+<div class="login_wrapper">
+  <img src="/images/user-login.png" class="login_img">
+</div>
+<!-- <form id="form_clear"> -->
+
+<div class="main">
+<div class ="whole-wrapper">
+<div class="otp_sent"> An OTP has been sent to your Mobile Number</div>
+<div class ="signin-wrapper">
+  <p class="sign-text">Sign In/Sign Up</p>
+  
+    
+    
+      
+      
+    
+  
+</div>
+<div class="login-form">
+  <div class="attr">
+    <p class="text-wrap"><input type="tel" class="text mobile-number" maxlength="10" required><label>Mobile Number</label><span class="resend edit_mobile">Edit</span></p>
+    <div class="userlogin">
+    <div class="login-type"><div class="login-button otp_login active">OTP Login</div><div class="login-button pass_login">Password Login</div></div>
+    <div class="loginwith-otp">
+    <p class="text-wrap"><input type="text" class="text" id="otp" required><label>Enter OTP</label><span class="resend resend_otp_exist" >Resend</span></p>
+    <button class="confirm-login otp"></button>
+    </div>
+    <div class="loginwith-password">
+    <div class="new-user">
+    <p class="text-wrap"><input type="text" class="text"  id="newuser_otp" required><label>Enter Generated OTP</label><span class="resend resend_otp_new">Resend</span></p>
+    <p class="text-wrap"><input type="password" class="text"  id="new_password" required><label>Enter New Password</label></p>
+    <p class="text-wrap"><input type="password" class="text"  id="confirm_pass" required><label>Confirm Password</label></p>
+    </div>
+    <div class="existing-user">
+      <p class="text-wrap"><input type="password" class="text exist_password" required><label>Enter Password</label><span class="resend forgot_password">Forgot Password ?</span></p>
+    </div>
+    <button class="confirm-login password"></button>
+    </div>
+
+    </div>
+    <button class="proceed-login">Proceed</button>
+    <p class="terms"><span class="">By signing in you agree to our<span class="text-red login_tc"> terms and conditions</span></span></p>
+  </div>
+</div>
+</div>
+<div class="verify-social">
+  <div class ="wrapper">
+    <div class="otp_sent"> An OTP has been sent to your Mobile Number</div>
+  <div class ="verify-wrapper">
+    <p class="verify-mobile">Verify Mobile number</p>
+  </div>
+  <div class="form">
+    <div class="attribute">
+      <p class="text-wrap"><input type="tel" class="text-fields socialMobilenumber" id="social-mobile" maxlength="10" required><label>Mobile Number</label><span class="resend edit_social_mobile">Edit</span></p>
+      <p class="text-wrap social-otp"><input type="text" class="text-fields mob_otp"  required><label>Enter OTP</label><span class="resend social-resend">Resend</span></p>
+      <button class="social-proceed-login ">Proceed</button>
+      <button class="verify-login">Sign Up</button>
+    </div>
+    <p class="terms"><span class="">By signing in you agree to our<span class="text-red social_tc"> terms and conditions</span></span></p>
+
+  </div>
+</div>
+</div>
+</div>
+<!-- </form> -->
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded',function(){
+        var mobile =   'mobile-number';
+        fn.msite.validateNumber(mobile,'signup');
+
+
+
+      $('.login_tc').on('click',function(){
+         window.location.href="/T&C"
+      });
+      $('.social_tc').on('click',function(){
+          window.location.href="/T&C"
+      });
+
+        // $('.login-container').addClass('show');
+        $('.popup_cancel').on('click',function(){
+          $('.login-container').removeClass('show');
+          fn.bodyScroll();
+          fn.msite.resetLogin();
+          // $('#form_clear')[0].reset();
+
+        });
+        $('.edit_social_mobile').on('click',function(){
+          // fn.msite.resetLogin();
+          $('.social-otp').removeClass('show');
+          $('.verify-login').removeClass('show');
+          var mob = $('.edit_social_mobile').attr('data-Mobile');
+          $('.mobile-number').val(mob);
+          $('.social-proceed-login').addClass('show');
+          $('.edit_social_mobile').removeClass('show');
+          $('.socialMobilenumber').removeAttr("disabled");
+          $('.mob_otp').val('');
+
+        });
+
+        $('.edit_mobile').on('click',function(){
+          fn.msite.resetLogin();
+          var mob = $('.edit_mobile').attr('data-mobile');
+          $('.mobile-number').removeAttr("disabled");
+          $('.mobile-number').val(mob);
+          $('#otp').val('');
+
+        });
+
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded',function(){
+    $('.fb_login').on('click', function () {
+      $('.whole-wrapper').removeClass('show');
+      FB.login(function (response) {
+        if (response.status === 'connected') {
+          getProfileFB(response.authResponse)
+        } else {
+          // console.log("FB Not Logged In")
+        }
+      });
+    });
+  });
+
+
+    //Get FB Profile
+    getProfileFB = function(userFB){
+      FB.api('/me', {fields: 'name, email, picture'}, function(response) {
+        // console.log(response);
+        var user = {
+          name: response.name,
+          email: response.email,
+          pic: response.picture.data.url,
+          id: userFB.userID,
+          auth_token: userFB.accessToken
+        }
+        localStorage.setItem("user_name", response.name);
+
+
+        if(response.email == undefined){
+          $('.login-error-msg').removeClass('hide');
+          $('.login-error-msg').html("Insufficient Permission from FB")
+          $('.login-error-msg').addClass('show');
+          setTimeout(function() {
+            $('.login-error-msg').removeClass('show');
+          },2000);
+        }
+        else{
+            localStorage.setItem("user_email", response.email);
+          FBLogin(user);
+
+        }
+
+        // console.log(user);
+
+      });
+    }
+
+    //Login to App
+    function FBLogin(user) {
+      fn.msite.showloader();
+      fn.ajaxForm(user,'POST','/home/login-using-facebook')
+        .done(function(res){
+          // console.log(res);
+          var resp = JSON.parse(res)
+          localStorage.setItem("social_mode","FB");
+          Object.assign(eventObject,{
+            "Name": resp.data.name,
+            "Email": resp.data.email,
+            "Phone": '+91' + resp.data.phone,
+            "Identity": resp.data.customer_key
+          });
+            if(resp.data.otp_verified == 0)
+            {
+              // fn.msite.home.createCustomer(resp.data.customer_key,'GP')
+              fn.msite.verifySocial(resp.data.customer_key);
+            }
+
+
+              fn.msite.createCustomer(resp.data.customer_key,'FB');
+             fn.msite.loginRedirect();
+
+            fn.msite.hideloader();
+        });
+    }
+
+</script>
+<script type = "text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '495228424012009',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+
+    //Check default Login status
+    // FB.getLoginStatus(function(response) {
+    //   if(response.status === "connected"){//If Connected
+    //     getProfileFB(response.authResponse);
+    //   }else{//Not Connected
+    //     console.log("Log In please")
+    //   }
+    // });
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+
+<div class="contact-form-pop-up">
+    <div class="contact_popup_cancel"><img src="/images/login_cross.png"></div>
+
+<div class ="contact-whole-wrapper">
+
+        <div class ="signin-wrapper">
+          <p class="sign-text">Get Notified</p>
+        </div>
+        <div class="notify-form">
+          <div class="attr">
+            
+            <p class="text-wrap"><input type="tel" class="text notify-mobile-number" maxlength="10" required><label>Enter mobile number to get notified</label><span class="resend change_mobile">Change</span></p>
+
+            <button class="proceed-notify">Proceed</button>
+          </div>
+        </div>
+    </div>
+</div>
+<script>
+  
+    window.addEventListener('DOMContentLoaded',function(){
+            const log_in_flag = $('.contact-form-pop-up').attr("logged_in") !== "true"
+      const mobile = 'notify-mobile-number'
+        fn.msite.validateNumber(mobile,'notify');
+        $('.contact_popup_cancel').on('click',function(){
+          $('.contact-form-pop-up').removeClass('show');
+          fn.bodyScroll();
+          // $('#form_clear')[0].reset();
+
+        });
+
+        $('.change_mobile').on('click',function(){
+          var mob = $('.change_mobile').attr('data-mobile');
+          $('.notify-mobile-number').removeAttr("disabled");
+          $('.proceed-notify').removeClass('enable');
+          $('.notify-mobile-number').val(mob);
+        });
+
+        $('.proceed-notify').on('click',function(e){
+          e.preventDefault();
+          fn.getNotified(log_in_flag);
+        });
+  });
+</script>
+<div class="msite-whole-wrapper">
+    <input type ="hidden" value='' class="hub-id"/>
+    <input type ="hidden" value='' class="city-id"/>
+    <input type ="hidden" value='g_k8kcec54' class="customer_key_value"/>
+    <input type = 'hidden' id = "loggedInValue" value = ''>
+    <input type ="hidden" value='' class="cart_id"/>
+    <input type ="hidden" value='' class="user_logged_in"/>
+    <input type ="hidden" value='non_member' id="member_status"/>
+    <input type ="hidden" value='merchant-delightful-gourmet' class="paytm-dev-merchantid"/>
+    <script>
+        // setTimeout(function(){ console.log("2");
+        //   var customerKey = 'g_k8kcec54'
+        //   webengage.user.login(customerKey);
+        // },1000)
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function(){
+            var user_loggedIn = $('.user_logged_in').val() || false;
+            var obj = {
+                "Logged-in":(user_loggedIn)?'Yes':'No',
+                "Source URL":window.location.href,
+                "City Name":fn.cityName,
+                "Hub ID": Number($('.hub-id').val())
+            }
+            
+            if(user_loggedIn == "true"){
+                Object.assign(obj,{
+                    "Customer Key":$('.customer_key_value').val()
+                })
+                // webengage.user.setAttribute({
+                //   /* System attributes */
+                //   "Name": resp.data.name,
+                //   "Email": resp.data.email,
+                //   "Phone": '+91' + resp.data.phone,
+                //   "Identity": resp.data.cart.customer_key
+                // })
+            }
+            if (window.location.href.indexOf("utm_source") > -1) {
+                webengage.track("UTM Visited",obj)
+            }
+
+            jQuery( document ).ready(function( $ ) {
+                $(window).on('popstate', function() {
+                    location.reload(true);
+                });
+            });
+            clevertap.profile.push({
+                "Site": {
+                   "member_status":fn.getMemberDataForUserProfile().member_status,
+                   "start_date":fn.getMemberDataForUserProfile().start_date,
+                   "end_date":fn.getMemberDataForUserProfile().end_date
+                }
+            });
+            webengage.track("Profile (Push)", {
+                  "member_status":fn.getMemberDataForUserProfile().member_status,
+                  "start_date":fn.getMemberDataForUserProfile().start_date,
+                  "end_date":fn.getMemberDataForUserProfile().end_date
+            }); 
+        })
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <!--
+    <noscript>
+         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVBCJN"
+                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
+     </noscript>
+     -->
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="loader">
+        <span></span>
+    </div>
+    <div id="mainWrapper">
+
+        <div class="empty-cart">
+            <div class="empty-image">
+                <img src="/images/empty_cart_icon.png">
+            </div>
+            <div class="empty-status">
+                <div class="empty-header">Your cart awaits your next meal</div>
+                <div href="/" class="continue-shop">Continue shopping</div>
+            </div>
+        </div>
+
+
+
+        <div class="checkout-alert">
+            <div class="checkout-msg ">Invalid Password</div>
+        </div>
+
+        <div class="toast"></div>
+        <div class="add_message">
+            <img src="https://d2407na1z3fc0t.cloudfront.net/Banner/info_2x.png" alt="Info">
+            <span>&times;</span>
+        </div>
+
+        <div class="oos-alert">
+            <div class="alert-box">
+                <div class="header">
+                    <div><img src="https://d2407na1z3fc0t.cloudfront.net/Banner/alert.png" alt="Alert!"/></div>
+                    <div>Alert [Change in Delivery address]</div>
+                </div>
+                <div class="content">
+                    <p class="message">
+                        We have detected a change in your Delivery address.
+                        The Above will affect the Product availability, pricing, offers and more..
+                    </p>
+                </div>
+                <div class="ctas">
+                    <button class="btn-wired change-addr"> Change Address</button>
+                    <button class="btn-wired select-addr"> Select Address</button>
+                    <button class="btn-wired dismiss"> Dismiss</button>
+                    <button class="btn-cont btn-dark continue-shopping"> Continue Shopping</button>
+                    <button class="btn-dark review-cart"> Review Cart</button>
+                    <button class="btn-dark go-cart"> Review Cart</button>
+                    <button class="btn-dark view-cart"> View Cart</button>
+                    <button class="btn-wired delivery_slot">Ok</button>
+                    <button class="btn-wired load-money-failed">Ok</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="checkout-oos-alert">
+            <div class="alert-box">
+                <div class="header">
+                    Forgot to select delivery slots?
+                </div>
+                <div class="content">
+                    <p class="message">
+                        Please select the time-slots for deliveries
+                    </p>
+                </div>
+                <div class="ctas">
+                    <button class="btn-cont btn-dark continue-shopping"> Continue Shopping</button>
+                    <button class="btn-dark review-cart"> Review Cart</button>
+                    <button class="btn-dark viewcart"> View Cart</button>
+                    <button class="btn-wired change-addr"> Change Address</button>
+                    <button class="btn-wired select-addr"> Select Address</button>
+                    <button class="btn-wired dismiss"> Dismiss</button>
+                    <button class="btn-wired ok"> Ok</button>
+                    <button class="btn-wired remove-cpn"> Remove Coupon</button>
+                    <button class="btn-dark apply-cpn">Continue</button>
+                    <button class="btn-wired cancelbtn"> Cancel</button>
+                    <button class="btn-dark delivery-waived"> Ok</button>
+                    <button class="btn-dark load-money-failed"> Ok</button>
+                    <button class="btn-wired upi-stay"> Stay</button>
+                    <button class="btn-dark upi-leave"> Leave</button>
+                    <button class="btn-wired reload-page">Ok</button>
+                </div>
+            </div>
+        </div>
+
+                <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700&display=swap" rel="stylesheet"><div class="plan_pop_up lock-screen">
+    <div class="plans_wrapper">
+    <div class="slot-header">
+        <span class="heading"><img src="/images/licious-meatopia-logo.svg" class="popup-logo" /></span>
+        <img src="/images/002_cancel.png" class="slot-close">
+    </div>
+    <div class="popup-benefits"></div>
+    <div class="plan-section-background" style="border-top: solid 1px rgba(0,0,0,0.25)">
+    <div class="change_text">Choose your plan</div>
+    <div class="plan-section">
+
+    </div>
+</div>
+<div class="tnc">By continuing you agree to our <span class="tnc-text"> Terms & Conditions </span> </div>
+    <div class="buy_plan">
+        <button></button>
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loyalty_cart_ana_obj = {
+                "name":fn.loyalty_plan_name,
+                "city":fn.getCityFromLS(), 
+                "hub_id":fn.getHubFromLS(), 
+                "total_plans":fn.getterLS("loyalty_total_plans"), 
+                "list":"", 
+                "member_status":"",
+                "new_plan":"", 
+                "recommended_plan":"",
+                "user_type":fn.getUserTypeFromLS(),
+                "logged_in":"true",
+                "total_orders":fn.getTotalOrdersFromLS(),
+                "total_items":"",
+                "selected_plan":"",
+                "total_items":"",
+                "delivery_charge":"",
+                "saved_amount":"",
+                "pr_totalsavedvalue":"",
+                "pr_totalorders":""
+            } 
+            const loyalty_remove_ana_obj = {
+                        "name":"",
+                        "city":"", 
+                        "hub_id":"", 
+                        "total_plans":"", 
+                        "list":"", 
+                        "member_status":"",
+                        "selected_plan":"", 
+                        "recommended_plan":"",
+                        "user_type":"",
+                        "logged_in":"",
+                        "total_orders":"",
+                        "oldcart_value":"",
+                        "total_items":"",
+                        "olddelivery_charge":"",
+                        "saved_amount":"",
+                        "newcart_value":"",
+                        "newdelivery_charge":""
+            } 
+            let selected_plan_string = ""
+            //{name,city, hub_id, total_plans, list( page/Screenname) , member_status,selected_plan, recommended plan,user_type,logged_in,total_orders,cart_value,total_items,delivery_charge,saved_amount,pr_totalsavedvalue,pr_totalorders
+        // if($('.plan_pop_up').hasClass('show')){
+        const loyalty_cart_details = JSON.parse(localStorage.getItem("loyalty_cart_data"));
+        if(loyalty_cart_details !== null && Object.keys(loyalty_cart_details).length>0){
+            let showPrice = (loyalty_cart_details.price - loyalty_cart_details.discounted_price)<=0?'0':` ${loyalty_cart_details.price}`
+            selected_plan_string = `${loyalty_cart_details.subprogram_name}, ${showPrice}, ${loyalty_cart_details.discounted_price}`
+        }    
+        const loyaltyPlans = new HandleLoyaltyPlans();
+        //const loyaltyBanner = new HomePageBannerHandler();
+        // loyaltyBanner.getHomePageAPIData("home")
+        // .done((res)=>{
+        //     const resp = JSON.parse(res);
+        //     isExpired = fn.validateLoyaltyExpiry(resp.data);
+        //     if(!resp.data.is_subscribed ){
+        //        loyaltyBanner.renderPopupBenefits(resp.data);
+        //     }
+        //     else{
+        //         loyalty_remove_ana_obj.expired_plan = resp.data.subscribed.subprogram_id
+        //     }
+        // })
+        
+        // }
+    loyaltyPlans.getLoyaltyPlans.call(loyaltyPlans,true)     
+    document.querySelector('.slot-close').addEventListener('click',function(e){
+        loyaltyPlans.closePopUp(e);
+        })
+        document.querySelector('.plan_pop_up').addEventListener('click',function(e){
+        //loyaltyPlans.closePopUp(e);
+        if(e.target.classList.contains("plan_pop_up")){
+            loyaltyPlans.closePopUp(e);    
+            }
+        })
+    $('.buy_plan button').on('click',function(e){
+          let isExpired = $(this).attr('isExpired');
+          let modify_plan = $(this).attr('modify_plan')
+          console.log({isExpired})
+          loyaltyPlans.closePopUp(e);    
+          if(isExpired === "true"){
+              //{name,city, hub_id, total_plans, list( page/Screenname) , member_status,Expired_plan,new_plan, recommended plan,user_type,logged_in,total_orders,cart_value,total_items,delivery_charge,saved_amount,pr_totalsavedvalue,pr_totalorders
+                loyalty_remove_ana_obj.name = fn.loyalty_plan_name
+                loyalty_remove_ana_obj.city = fn.getCityFromLS()
+                loyalty_remove_ana_obj.hub_id = fn.getHubFromLS()
+                loyalty_remove_ana_obj.total_plans = fn.getterLS("loyalty_total_plans")
+                loyalty_remove_ana_obj.list = fn.loyalty_list
+                loyalty_remove_ana_obj.member_status = fn.loyalty_banners_obj.member_status
+                loyalty_remove_ana_obj.expired_plan = fn.getterLS("loyalty_expired_plan")
+                loyalty_remove_ana_obj.new_plan = loyaltyPlans.getPlanDetailText.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))
+                loyalty_remove_ana_obj.recommended_plan = (fn.getterLS("loyalty_recommended") !== "")?loyaltyPlans.getPlanDetailText.call(loyaltyPlans,fn.getterLS("loyalty_recommended")):""
+                loyalty_remove_ana_obj.user_type = fn.getUserTypeFromLS()
+                loyalty_remove_ana_obj.logged_in = fn.getLoginStatus()
+                loyalty_remove_ana_obj.total_orders = fn.getTotalOrdersFromLS()
+                loyalty_remove_ana_obj.cart_value = ""
+                loyalty_remove_ana_obj.total_items = ""
+                loyalty_remove_ana_obj.delivery_charge = ""
+                loyalty_remove_ana_obj.saved_amount = ""
+                loyalty_remove_ana_obj.pr_totalsavedvalue = fn.loyalty_banners_obj.pr_totalsavedvalue
+                loyalty_remove_ana_obj.pr_totalorders = fn.loyalty_banners_obj.pr_totalorders
+              fn.msite.sendAnalyticsData("confirmrenew_loyalty",{...loyalty_remove_ana_obj,...{"source":"loyalty"}})
+          }
+          else if(modify_plan === "true"){
+            loyalty_cart_ana_obj.old_plan = selected_plan_string;
+            loyalty_cart_ana_obj.new_plan = loyaltyPlans.getPlanDetailText.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))
+            fn.msite.sendAnalyticsData("modifyplan_loyaltycart",{...loyalty_cart_ana_obj,...{"source":"loyalty"}})
+          }
+          else {
+              //{name,city, hub_id, total_plans, list( page/Screenname) , member_status,selected_plan, recommended plan,user_type,logged_in,total_orders,cart_value,total_items,delivery_charge,saved_amount,pr_totalsavedvalue,pr_totalorders
+              loyalty_cart_ana_obj.total_plans = fn.getterLS("loyalty_total_plans")
+              loyalty_cart_ana_obj.list = fn.loyalty_list
+              loyalty_cart_ana_obj.member_status = (isExpired === "true")?"expired":"non-member"
+              loyalty_cart_ana_obj.selected_plan = loyaltyPlans.getPlanDetailText.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))
+              loyalty_cart_ana_obj.recommended_plan = (fn.getterLS("loyalty_recommended") !== "")?loyaltyPlans.getPlanDetailText.call(loyaltyPlans,fn.getterLS("loyalty_recommended")):""
+              loyalty_cart_ana_obj.total_items = fn.getterLS("loyalty_total_items")
+              loyalty_cart_ana_obj.cart_value = fn.getterLS("loyalty_cart_value")
+              loyalty_cart_ana_obj.delivery_charge = fn.getterLS("loyalty_delivery_charge")
+              loyalty_cart_ana_obj.saved_amount = fn.getterLS("loyalty_saved_amount")
+              loyalty_cart_ana_obj.pr_totalsavedvalue = fn.loyalty_banners_obj.pr_totalsavedvalue
+              loyalty_cart_ana_obj.pr_totalorders = fn.loyalty_banners_obj.pr_totalorders
+              fn.msite.sendAnalyticsData("selectplan_loyaltycart",{...loyalty_cart_ana_obj,...{"source":"loyalty"}})
+          }
+        //   loyalty_remove_ana_obj.new_plan = loyaltyPlans.getCheckedPlan.call(loyaltyPlans)
+        //   loyalty_remove_ana_obj.list = fn.getterLS("loyalty_banner_click_page")
+        //   const page = fn.getterLS("loyalty_banner_click_page")
+        //   if(page !== ""){
+        //   }
+          loyaltyPlans.buyPlan.call(loyaltyPlans,undefined,isExpired)
+        })
+
+        document.body.addEventListener('click',function(e){
+            if(e.target.classList.contains("right-content")){
+                //loyaltyPlans.getPlanDetailText.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))
+                if(fn.loyalty_list !== fn.page_list_constants.cart){
+                    fn.loyalty_landing_obj.member_status = "non-member"
+                    fn.loyalty_list=fn.page_list_constants.loyalty_pay
+                    fn.loyalty_landing_obj.list = fn.page_list_constants.loyalty_pay
+                    fn.msite.sendAnalyticsData("changeplan_loyalty",{"source":"loyalty","selected_plan":`${loyaltyPlans.getPlanDetailText.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))}`})
+                }
+                else {
+                    //{name,city, hub_id, total_plans, list( page/Screenname) , member_status,selected_plan, recommended plan,user_type,logged_in,total_orders,cart_value,total_items,delivery_charge,saved_amount,pr_totalsavedvalue,pr_totalorders
+                    loyalty_cart_ana_obj.list = fn.page_list_constants.cart    
+                    loyalty_cart_ana_obj.member_status = fn.loyalty_banners_obj.member_status
+                    loyalty_cart_ana_obj.selected_plan = selected_plan_string
+                    loyalty_cart_ana_obj.recommended_plan = (fn.getterLS("loyalty_recommended") !== "")?loyaltyPlans.getPlanDetailText.call(loyaltyPlans,fn.getterLS("loyalty_recommended")):""
+                    loyalty_cart_ana_obj.cart_value = fn.getterLS("loyalty_cart_value")
+                    loyalty_cart_ana_obj.total_items = fn.getterLS("loyalty_total_items")  
+                    loyalty_cart_ana_obj.delivery_charge = fn.getterLS("loyalty_delivery_charge")
+                    loyalty_cart_ana_obj.saved_amount = fn.getterLS("loyalty_saved_amount") 
+                    loyalty_cart_ana_obj.pr_totalsavedvalue = fn.loyalty_banners_obj.pr_totalsavedvalue
+                    loyalty_cart_ana_obj.pr_totalorders = fn.loyalty_banners_obj.pr_totalorders
+                    fn.msite.sendAnalyticsData("changeplan_loyaltycart",{...loyalty_cart_ana_obj,...{"source":"loyalty"}})
+                }
+                $('.buy_plan button').html(`${loyaltyPlans.getPlanMonths.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))}`)
+
+                //refactor_loyalty
+                    $('.plan_pop_up').show();
+                    $('.plan_pop_up').addClass('show')
+                //loyaltyPlans.getLoyaltyPlans.call(loyaltyPlans,true);
+                }
+            })
+        
+
+    // if(window.location.href.includes("payment")){
+    //     old_plan = window.location.href.split('/')[-1];
+    // }
+    document.body.addEventListener('change',
+        function(e){
+            if(e.target.classList.contains("loyalty_plan")){
+            loyaltyPlans.handlePlanChange.call(loyaltyPlans,e,true)
+        }; 
+        });   
+        $('.tnc').on('click',function(e){
+            window.location.href = '/loyalty/tnc';
+        })   
+    // if($('plan_pop_up').hasClass('show')){
+    //     document.addEventListener('click',function(e){
+    //         if(!e.target.classList.contains('plans_wrapper')){
+    //             $('plan_pop_up').removeClass('show')
+    //         }
+    //     })
+    // }
+    document.body.addEventListener('click',function(e){
+                if(e.target.classList.contains("cross-mark")){
+                    //name,city, hub_id, total_plans, list( page/Screenname) , member_status,selected_plan, recommended plan,user_type,logged_in,total_orders,oldcart_value,total_items,olddelivery_charge,saved_amount,newcart_value,newdelivery_charge,pr_totalsavedvalue,pr_totalorders
+                    loyalty_remove_ana_obj.name = fn.loyalty_plan_name
+                    loyalty_remove_ana_obj.city = fn.getCityFromLS()
+                    loyalty_remove_ana_obj.hub_id = fn.getHubFromLS()
+                    loyalty_remove_ana_obj.total_plans = fn.getterLS("loyalty_total_plans")
+                    loyalty_remove_ana_obj.list = fn.page_list_constants.cart
+                    loyalty_remove_ana_obj.member_status = fn.loyalty_banners_obj.member_status
+                    loyalty_remove_ana_obj.selected_plan = loyaltyPlans.getPlanDetailText.call(loyaltyPlans,loyaltyPlans.getCheckedPlan.call(loyaltyPlans))
+                    loyalty_remove_ana_obj.recommended_plan = (fn.getterLS("loyalty_recommended") !== "")?loyaltyPlans.getPlanDetailText.call(loyaltyPlans,fn.getterLS("loyalty_recommended")):""
+                    loyalty_remove_ana_obj.user_type = fn.getUserTypeFromLS()
+                    loyalty_remove_ana_obj.logged_in = fn.getLoginStatus()
+                    loyalty_remove_ana_obj.total_orders = fn.getTotalOrdersFromLS()
+                    loyalty_remove_ana_obj.oldcart_value = fn.getterLS("loyalty_cart_value")
+                    loyalty_remove_ana_obj.total_items = fn.getterLS("loyalty_total_items")
+                    loyalty_remove_ana_obj.olddelivery_charge = fn.getterLS("loyalty_delivery_charge")
+                    loyalty_remove_ana_obj.saved_amount = fn.getterLS("loyalty_saved_amount")
+                    loyalty_remove_ana_obj.pr_totalsavedvalue = fn.loyalty_banners_obj.pr_totalsavedvalue
+                    loyalty_remove_ana_obj.pr_totalorders = fn.loyalty_banners_obj.pr_totalorders
+                    loyaltyPlans.removeLoyalty.call(loyaltyPlans,"cart-page")
+                    .then((res)=>{
+                        loyalty_remove_ana_obj.newcart_value = fn.getterLS("loyalty_cart_value")
+                        loyalty_remove_ana_obj.newdelivery_charge = fn.getterLS("loyalty_delivery_charge")
+                        fn.msite.sendAnalyticsData("removeplan_loyaltycart",{...loyalty_remove_ana_obj,...{"source":"loyalty"}})
+                    })
+                    }
+                }) 
+    })
+
+</script>
+<link rel="stylesheet" href="/css/frame/homenew.css?v=7380db0b318"/>
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700&display=swap" rel="stylesheet">
+
+<header>
+  <div class="location">
+    <img class="location_point" src="/images/location-icon.png">
+    <span class="select_location">
+            Indiranagar,Bangalore
+          </span>
+    <img class="drop_location" src="/images/dropdown-icon.png">
+  </div>
+  <div class="header-logo">
+    <img class="humburger-menu" src="/images/hamburger.png"  data-name="Hamburger">
+    <a href = "/" data-name="LiciousLogo" ><img class="licious-logo" src="/images/lici.png"> </a>
+    <img class="search-icon" src="/images/search_icon.png">
+  </div>
+  </header>
+      <div class="loc-pop-cont show">
+      <script>
+        var d = document.querySelector(".msite-whole-wrapper");
+        d.className += " fix default";
+      </script>
+        <div class = "loc-pop-cont-inner">
+        <div class = "loc-addr-pop">
+          <div class = "addr-heading">Your saved addresses</div>
+          <div class = "addr-container">
+            
+            
+            
+            
+            
+          </div>
+        </div>
+        <div class="location-popup-container">
+          <div class = "location-popup-text hide">Deliver to a different address</div>
+          <div class="location-popup fit">
+            <p class="location-header"><span class="choose-location">Choose delivery location</span></p>
+            <div class="location-body">
+              <p class="location-name">
+                  <span class="city_blr city active">Bengaluru</span>
+                  <span class="city_del city">NCR</span>
+                  <span class="city_hyd city">Hyderabad</span>
+              </p>
+              <p class="location-name">
+                <span class="city_cha city">Chandigarh</span>
+                <span class="city_pan city">Panchkula</span>
+                <span class="city_moh city">Mohali</span>
+              </p>
+              <p class="location-name">
+                <span class="city_mumbai city">Mumbai</span>
+                <span class="city_pune city">Pune</span>
+                <span class="city_chennai city">Chennai</span>
+              </p>
+              <div class="location-wrapper" >
+                <input type="text" id = "location-pop" placeholder="Enter your locality eg. Indranagar..." class="location-text">
+                <div class="searches">
+                  
+                  
+                  
+                  
+                  
+
+                </div>
+              </div>
+              <p class="or-text">Or</p>
+              <div class="serach-location"><button class="location-wrap"><img src="/images/location-set.png" class="desired-locations"><span class="usedlocation dark-gray">Use my location</span></button></div>
+            </div>
+            <div class="thanku-box"><p><img src="/images/Alert.png" class="alert"><span class="thanku-msg">We are working hard to bring safe, fresh meats and seafood to you soon. We will inform you as soon as we are up and running</span></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="search-blog">
+    <div class="search-header">
+      <div class="left-div"><img src="/images/side-bar.png" class="back-arrow"></div><div class="right-div"><input type="text" placeholder="What are you craving for"class="search-type"><img src="/images/search-icon.png" class="search-icon-class"></div>
+    </div>
+    <div class="search-explore">
+      <span class="explore-by">Explore by category</span>
+      <div class="category-list">
+        <ul>
+        </ul>
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class = "whole-side" data-name="SideMenu">
+    <div class="sidemenu">
+      <div class="side-menu-bar menu-header" style="z-index:1">
+        <img src="/images/side-bar.png" class="side-arrow">
+        <span class="sidemenu-text">Menu</span>
+        <img src="/images/app-i-con@2x.png" class="licious-smile">
+      </div>
+      <div class="category-display">
+        <div class="sidebar_loyalty_default_banner_placeholder" style="padding-top:1px"></div>
+        <ul>
+          <li class="special-border">
+            <a href="/" data-name = "home"><img src="/images/home-new.png" class="home-images"><span class="catlog-text">Home</span></a>
+          </li>
+          <li>
+            <span class="popular-category">Popular categories</span>
+          </li>
+          <div class = "cat">
+          </div>
+
+                    <li class="blog">
+            <a href="https://blog.licious.in"><span class="catlog-extra-text">Blog</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="total_item"></div>
+  <div class="coupon_toast">
+      
+  </div>
+
+
+<script>
+   if(navigator.userAgent.includes('phonepe-webview')) {
+    $('.liciousWallet').remove();
+    $('.blog').remove();
+   }
+
+  //Map init
+  function initMap(bounds) {
+
+    var defaultBounds = bounds;
+    if(!defaultBounds){
+       defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(12.9716, 77.5946)
+      );
+    }
+
+    var cityname = localStorage.getItem('city');
+    if(cityname==undefined || cityname == null)
+    {
+    localStorage.setItem('city','Bengaluru');
+    }
+
+    var popUpInput = document.getElementById('location-pop');
+    var options = {componentRestrictions: {country: 'in'}, bounds: defaultBounds, zoom: 13};
+    var autocompletePop = new google.maps.places.Autocomplete(popUpInput, options);
+
+    //Maps
+    var componentForm = {
+      locality : 'long_name'
+    };
+    autocompletePop.addListener('place_changed', function () {
+      var placePop = autocompletePop.getPlace();
+      if(placePop.geometry){
+        var city_name;
+        var results = placePop.address_components
+        //
+        for (var i = 0; i < placePop.address_components.length; i++) {
+            var addresstype = placePop.address_components[i].types[0];
+              if (componentForm[addresstype]) {
+                 city_name = placePop.address_components[i][componentForm[addresstype]];
+                // console.log(city_name);
+              }
+            }
+        if(city_name != null || city_name !=  ""){
+          localStorage.setItem("city",city_name)
+        };
+
+        $('.lat-val').val(placePop.geometry.location.lat());
+        $('.lng-val').val(placePop.geometry.location.lng());
+        var location = popUpInput.value;
+        // var cityName = localStorage.getItem('city');
+        fn.msite.getLocation(placePop.geometry.location.lat(), placePop.geometry.location.lng(),location,city_name,function(err ,res){
+          if(!err && res.result == "success"){
+            localStorage.setItem('default_addr_id','');
+          } else {
+            $('.thanku-box').show();
+          }
+        });
+      }
+
+    });
+
+    popUpInput.addEventListener('keypress',function (e) {
+      if (e.which == 13) {
+        var firstResult = $(".pac-container .pac-item:first").text();
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({"address":firstResult }, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            var lat = results[0].geometry.location.lat(),
+              lng = results[0].geometry.location.lng(),
+              placeName = results[0].address_components[0].long_name;
+              popUpInput.value = firstResult;
+
+            var city_name ;
+            var componentForm = {
+              locality : 'long_name'
+            };
+            for (var i = 0; i < results[0].address_components.length; i++) {
+                var addresstype = results[0].address_components[i].types[0];
+      						if (componentForm[addresstype]) {
+      							 city_name = results[0].address_components[i][componentForm[addresstype]];
+      						}
+      					}
+            if(city_name != null || city_name !=  ""){
+              localStorage.setItem("city",city_name)
+            };
+            fn.msite.getLocation(lat,lng,placeName,localStorage.getItem("city"),function(err ,res){
+              if(!err && res.result == "success"){
+                localStorage.setItem('default_addr_id','');
+              } else {
+                $('.thanku-box').show();
+              }
+            });
+          }
+        });
+      }
+    });
+
+    if(typeof showMap === 'function'){
+      showMap();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    let isExpired = false;
+    const loyaltyBanner = new HomePageBannerHandler();
+        loyaltyBanner.getHomePageAPIData("home")
+        .done((res)=>{
+            const resp = JSON.parse(res);
+            fn.populateLoyaltyBannerData(resp.data)
+            if(resp.data.is_subscribed && !resp.data.subscribed.is_expired){
+              $('.header-logo .licious-logo').attr("src","/images/licious-meatopia-logo.svg")
+              $('.header-logo .licious-logo').css("height","31px");
+              $('.header-logo').css("background-color","#ebebeb")
+              // $('#hamburger-profile .meatopia-badge').attr("src","/images/licious-meatopia-badge.png")
+            }
+            else{
+              $('.header-logo').css("background-color","white")
+            }
+            loyaltyBanner.handleBannerRenderCases(resp.data,'sidebar');
+            isExpired = fn.validateLoyaltyExpiry(resp.data);
+        })
+      document.querySelector('.sidebar_loyalty_default_banner_placeholder').addEventListener('click', (e) => {
+        $('.whole-side').hide();
+        HomePageBannerHandler.handleBannerClick(e.target,isExpired,fn.page_list_constants.sidebar,'click');
+      })
+    fn.msite.home.getCategories();
+
+    var isBaPresent = localStorage.getItem('is_ba_present');
+    var resp = JSON.parse(localStorage.getItem('paypalObj'));
+    if(resp && resp.display_title!=undefined && resp.offer_text!=undefined && !navigator.userAgent.includes("phonepe-webview")) {
+      paypalContent =
+        '<li class="liciousWallet">'+
+          '<a href="/paypal-autolink"><img src="/images/order-new.png" class="home-images">'+
+            '<span class="catlog-text">' +  resp.display_title + '</span>'+
+            '<span style="border: 1px solid red;float: right;color: red;/* padding: 1px; */padding-left: 3px;padding-right: 4px;border-radius: 3px;">' +  (isBaPresent=="false" ? 'Link' : 'Unlink') + '</span>'+
+            '<span style="display: block;font-size: 70%;">' +  resp.offer_text + '</span>'+
+          '</a>'+
+        '</li>'
+        $('.paypal-sidemenu').append(paypalContent);
+    }
+
+    //location_point starts (google searches rank uplifting)
+    $('.city_blr').on('click', function(){
+      $('.location-name span').removeClass("active");
+      $(this).addClass("active");
+      var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(12.9716, 77.5946)
+      );
+      $('.location-text').attr("placeholder","Enter your locality eg. Indranagar...");
+      initMap(defaultBounds);
+      // console.log(defaultBounds);
+    });
+
+    $('.city_del').on('click', function(){
+      $('.location-name span').removeClass("active");
+      $(this).addClass("active");
+      var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(28.457523, 77.026344)
+      )
+      $('.location-text').attr("placeholder","Enter your locality eg. Sector 28...");
+      initMap(defaultBounds);
+      // console.log(defaultBounds);
+    });
+
+    $('.city_hyd').on('click', function() {
+      $('.location-name span').removeClass("active");
+      $(this).addClass("active");
+      var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(17.3850, 78.4867)
+      )
+      $('.location-text').attr("placeholder","Enter your locality eg. HITEC City...");
+      initMap(defaultBounds);
+      // console.log(defaultBounds);
+    });
+    $('.city_cha').on('click', function() {
+      $('.location-name span').removeClass("active");
+      $(this).addClass("active");
+      var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(30.7333, 76.7794)
+      )
+      $('.location-text').attr("placeholder","Enter your locality eg. Chandigarh...");
+      initMap(defaultBounds);
+      // console.log(defaultBounds);
+    });
+    // new one
+    $('.city_pan').on('click', function() {
+      $('.location-name span').removeClass("active");
+      $(this).addClass("active");
+      var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(30.6942, 76.8606)
+      )
+      $('.location-text').attr("placeholder","Enter your locality eg. Panchkula...");
+      initMap(defaultBounds);
+      // console.log(defaultBounds);
+    });
+    $('.city_moh').on('click', function() {
+      $('.location-name span').removeClass("active");
+      $(this).addClass("active");
+      var defaultBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(30.7046, 76.7179)
+      )
+      $('.location-text').attr("placeholder","Enter your locality eg. Mohali...");
+      initMap(defaultBounds);
+      // console.log(defaultBounds);
+    });
+
+      $('.city_mumbai').on('click', function() {
+          $('.location-name span').removeClass("active");
+          $(this).addClass("active");
+          var defaultBounds = new google.maps.LatLngBounds(
+              new google.maps.LatLng(19.13508523, 72.8146101)
+          )
+          $('.location-text').attr("placeholder","Enter your locality eg. Andheri West...");
+          initMap(defaultBounds);
+          // console.log(defaultBounds);
+      });
+
+      $('.city_pune').on('click', function() {
+          $('.location-name span').removeClass("active");
+          $(this).addClass("active");
+          var defaultBounds = new google.maps.LatLngBounds(
+              new google.maps.LatLng(18.5908135, 73.7479204)
+          )
+          $('.location-text').attr("placeholder","Enter your locality eg. Wakad...");
+          initMap(defaultBounds);
+          // console.log(defaultBounds);
+      });
+
+      $('.city_chennai').on('click', function() {
+          $('.location-name span').removeClass("active");
+          $(this).addClass("active");
+          var defaultBounds = new google.maps.LatLngBounds(
+              new google.maps.LatLng(13.0827, 80.2707)
+          )
+          $('.location-text').attr("placeholder","Enter your locality eg. Velachery...");
+          initMap(defaultBounds);
+          // console.log(defaultBounds);
+      });
+
+    //location_point ends
+//    if(!localStorage.getItem('askLocation')){
+//      localStorage.setItem('askLocation',true);
+//    }
+
+    $('.search-icon').on('click',function(){
+      $('.search-blog').show();
+//      var stateObj = { popup: "search" };
+//      history.pushState(stateObj, "search", "");
+      fn.msite.home.exploreCategories('Header');
+      fn.msite.home.noScroll();
+    });
+
+    $('.back-arrow').on('click',function(){
+      $('.search-blog').hide();
+      fn.msite.home.hoverBanner(null,true);
+      console.log("called1")
+      fn.msite.home.bodyScroll();
+    });
+
+    $('.humburger-menu').on('click',function() {
+      $('.whole-side').show();
+//      var stateObj = { popup: "menu" };
+//      history.pushState(stateObj, "menu", "");
+      fn.msite.home.GAEventClick($(this),'a','Hamburger');
+      fn.msite.home.hoverBanner(null,false);
+      fn.msite.home.noScroll();
+    });
+
+    $('.location').on('click',function () {
+      if(!$('.msite-whole-wrapper').hasClass('default')){
+        fn.msite.home.hoverBanner(null,false);
+        $('.loc-pop-cont').show();
+
+        $('.location').addClass('clicked');
+
+        // $('.drop_location').toggleClass('clicked');
+        fn.msite.home.noScroll();
+      }
+    });
+
+//    $('.location-popup').on('click',function (e) {
+//      $('.searches').fadeOut();
+//
+//    });
+
+    $('.whole-side').on('click',function(){
+      $('.whole-side').hide();
+      fn.msite.home.hoverBanner(null,true);
+      console.log("called2")
+
+      fn.msite.home.bodyScroll();
+    })
+
+    $('.category-display').on('click',function (e) {
+      e.stopImmediatePropagation();
+    })
+
+    $('.side-arrow').on('click',function(){
+
+      $('.whole-side').hide();
+      fn.msite.home.hoverBanner(null,true);
+      console.log("called3")
+
+      fn.msite.home.bodyScroll();
+    })
+
+    $('.location-text').on('input propertychange paste',function(){
+      $('.thanku-box').hide();
+      $('.searches').hide();
+    });
+
+    $('.header-logo a').on('click',function(e){
+      e.preventDefault();
+      fn.msite.home.GAEventClick($(this),'a',$(this).data('name'))
+      window.location = $(this).attr('href');
+    });
+
+    $('.location-text').on('focus',function(e){
+      e.stopPropagation();
+      if($(this).val().length == 0){
+        $('.searches').fadeIn();
+      }
+    });
+
+    $('.location-popup-text').on('click',function(e){
+      e.stopImmediatePropagation();
+      $('.location-popup').fadeIn();
+      $('.location-popup-text').addClass('hide');
+    });
+
+    $('.serach-location').on('click',function () {
+      if(navigator.userAgent.includes('phonepe-webview')) {
+        PhonePe.PhonePe.build(PhonePe.Constants.Species.web)
+       .then((sdk) => {
+         sdk.seekPermission([PhonePe.Constants.Permission.LOCATION])
+         .then((res) => {
+           fn.msite.showloader();
+           sdk.getCurrentLocation()
+           .then(location => {
+              var locationObj = JSON.parse(location);
+              // alert("Location received with latitude = " locationObj.latitude + ' longitude = ' +locationObj.longitude)
+              var pos = {
+                lat: locationObj.latitude,
+                lng: locationObj.longitude
+              }
+
+              var geocoder = new google.maps.Geocoder;
+              geocoder.geocode({'location': pos}, function(results, status) {
+                if (status === 'OK') {
+                  if (results[0]) {
+                      var cityName = localStorage.getItem('city');
+                      fn.msite.getLocation(pos.lat, pos.lng, results[0].formatted_address, cityName, function(err ,res){
+                        if(!err && res.result == "success"){
+                          localStorage.setItem('default_addr_id','');
+                          window.location.reload();
+                        } else {
+                          // console.log("Hii");
+                          $('.thanku-box').show();
+                        }
+                      });
+                  } else {
+                      alert('No results found');
+                  }
+                }
+                else {
+                    alert('Geocoder failed due to: ' + status);
+                }
+              })
+            });
+          })
+          .catch((err) => {
+              $('.thanku-box').show();
+          })
+        })
+      }
+      else {
+        fn.msite.getGPSLocation(function(err ,res){
+          if(!err && res.result == "success"){
+            localStorage.setItem('default_addr_id','');
+            window.location.reload();
+          } else {
+            // console.log("Hii");
+            $('.thanku-box').show();
+          }
+        })
+      }
+    });
+
+    $('.location-text').on('click',function(e){
+      e.stopPropagation();
+    });
+
+    $('.location-text').on('blur',function(e){
+      e.stopPropagation();
+      $('.searches').fadeOut();
+    });
+
+    $('.loc-pop-cont').on('click',function(e){
+     var elem = $(this);
+     $('.searches').fadeOut();
+     if($('.location').hasClass('clicked')) {
+       if($('.location-popup-text').hasClass('hide') && !$('.location-popup').hasClass('fit')){
+         $('.location-popup-text').removeClass('hide');
+         $('.location-popup').fadeOut();
+       }
+       $('.location').removeClass('clicked');
+       elem.hide();
+       console.log("called4")
+       //fn.msite.home.bodyScroll();
+     }
+    });
+
+    $('.loc-pop-cont-inner').on('click',function(e){
+      e.stopPropagation();
+    });
+
+    $('.licious-smile').on('click',function () {
+      window.location.href = "/"
+    });
+
+    fn.msite.home.getMobileOperatingSystem();
+    fn.msite.renderRecentSearches();
+    fn.msite.getAddress();
+    search.initSearch($('.search-type'),'/search');
+
+
+//    window.onpopstate = function(event) {
+//        $('.back-arrow').trigger('click');
+//        $('.side-arrow').trigger('click');
+//    };
+  });
+
+
+
+
+  //var showLocation = function(){
+  //  $('.location-overlay').addClass("show");
+  //  fn.msite.home(null,false);
+  //  fn.msite.home.noScroll();
+  //}
+  ////        setTimeout(showLocation, 1000);
+  //$('.location-menu .location').on('click', showLocation);
+
+</script>
+<script>
+//  (function(){
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+
+    var xDown = null;
+    var yDown = null;
+
+    function handleTouchStart(evt) {
+      xDown = evt.touches[0].clientX;
+      yDown = evt.touches[0].clientY;
+    }
+
+    function handleTouchMove(evt) {
+      if ( ! xDown || ! yDown ) {
+        return;
+      }
+
+      var xUp = evt.touches[0].clientX;
+      var yUp = evt.touches[0].clientY;
+
+      var xDiff = xDown - xUp;
+      var yDiff = yDown - yUp;
+
+      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+          $(evt.target).trigger('swipeleft',evt);
+        } else {
+          $(evt.target).trigger('swiperight',evt);
+        }
+      } else {
+        if ( yDiff > 0 ) {
+          $(evt.target).trigger('swipeup',evt);
+        } else {
+          $(evt.target).trigger('swipedown',evt);
+        }
+      }
+      /* reset values */
+      xDown = null;
+      yDown = null;
+    }
+//  })
+
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted ||
+    ( typeof window.performance != "undefined" &&
+      window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
+
+</script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" />
+<input type="hidden" class="subloc" value= "Home page">
+
+<script>
+var MAP_API_KEY = 'AIzaSyA864Xj0rh42-GFOqyZpi1KHpKNS_ct6Ds'
+document.addEventListener('DOMContentLoaded', function(){
+  $('.location').show();
+  $('.total_item').show();
+})
+</script>
+  
+<div class="full_wrapper">
+   
+  <div class="wrapper">
+    <div class="block">
+      
+      <div class="banners swiper-container">
+        <div class="main-banner swiper-wrapper" data-name="OfferBanner">
+         </div>
+          <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="homepage_loyalty_default_banner_placeholder"></div>
+      
+      <div class="blog">
+          <a href="/licious-way" data-name="Know the Licious way"><span class="licious-way">Know the Licious way<img class="arrow" src="/images/arrow.png"></span></a>
+      </div>
+
+        <div class="interlaced-banner-wrapper">
+            <a class="interlaced-image-container" href="#">
+                <img src="" class="interlace-img">
+            </a>
+        </div>
+        
+        
+            
+            
+            
+                
+                
+                    
+                    
+                    
+                    
+                
+
+            
+            
+        
+
+      <div class="deals-blog todays-deal">
+          <img src="/images/today deals.png" class="placeholder">
+      </div>
+      <div class="homepage_loyalty_member_banner_placeholder"></div>
+      <div class="deals-blog youmaylike">
+          <img src="/images/you may also like.png" class="placeholder">
+      </div>
+      
+      <div class="explore-category explore">
+          <img src="/images/explore by category.png" class="placeholder">
+      </div>
+
+      <div class="banner uspbanner"><img src="" class="banner-size">
+          <img src="/images/banner placeholder.png" class="placeholder">
+      </div>
+      <div class="deals-blog best-sellers">
+          <img src="/images/you may also like.png" class="placeholder">
+      </div>
+      <div class="deals-blog blogs">
+          <img src="/images/blogs.png" class="placeholder">
+      </div>
+      <div class="about-licious">
+          <img src="/images/made with licious.png" class="placeholder">
+      </div>
+      <div class="deals-blog testimonials">
+      </div>
+      <div class="deals-blog inthenews">
+          <img src="" class="placeholder">
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="promovid" class="video">
+  <iframe width="100%" id="promovideo" class="bannerVideo" height="20%" src="https://www.youtube.com/embed/5psmTEtMdrA?enablejsapi=1&amp;rel=0&amp;modestbranding=0&amp;autohide=1&amp;showinfo=0" frameborder="0"  allowfullscreen></iframe>
+  <div class="close"><img src="/images/video_close.png" class="close_img"></div>
+</div>
+<div class="locus-wrapper lock-screen-order" style="display: none;">
+    <div class="locus-screen">
+        <div class="main-header">
+            <span>Track your order (Live)</span>
+            <img src="/images/002_cancel.png" class="close-locus">
+        </div>
+        <iframe src="" class="locus-link" id="iframeid">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+        <div class="footer">
+            <div class="amount-section"><span class="pay-amt">Pay: &#8377;0</span> <span class="payment-info"><img src="/images/information.png"></span></div>
+            <div class="pay-section"><div class="pay-text">Pay</div><div class="go-next"><img src="/images/side-arrow-order.png"></div></div></div>
+            <div class="payment-break-down">
+                <div class="header"><div class="msg">Payment Breakdown</div><div class="image"><img src="/images/triangle.png"></div></div>
+                <ul class="payment-charges">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <footer data-name="Footer">
+
+  <div class="footer-tag"><span class="footertext"><img src="/images/lici.png" class="liciousimage"></span></div>
+  <div class="footer-catlog">
+    <div class="footer-block">
+      <div class="footer-contact">
+
+        <ul>
+          <li>
+            <h3>USEFUL LINKS</h3>
+          </li>
+          <li>
+            <a href="/why-licious" data-type="Why licious" class="Footerlinks">Why licious</a>
+          </li>
+          <li>
+            <a href="/Refer-earn"  data-type="Refer & Earn" class="Footerlinks">Refer & Earn</a>
+          </li>
+          <li>
+            <a href="https://d2407na1z3fc0t.cloudfront.net/Banner/Cash-n-Cash-pWeb-500new.jpg" data-type="Licious Cash" class="Footerlinks">Licious Cash & Cash+</a>
+            
+          </li>
+          <li class='blog'>
+            <a href="https://blog.licious.in"  data-type="Blog" class="Footerlinks">Blog</a>
+
+          </li>
+          <li>
+            <a href="/about-us"  data-type="about & us" class="Footerlinks"> About Us</a>
+          </li>
+          <li>
+            <a href="/fssc-certificate"  data-type="about & us" class="Footerlinks"> FSSC 22000 Certification</a>
+          </li>
+        </ul>
+
+
+        <ul>
+
+          <li>
+            <h3>CONTACT US</h3>
+          </li>
+          <li>
+            <a href = "tel:+18004190786" class ="links">1800-4190-786</a>
+          </li>
+          <li>
+            <a href = "mailto:talktous@licious.com">talktous@licious.com</a>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li>
+            <h3>KEEP IN TOUCH</h3>
+          </li>
+          <li>
+            <div class="image-link">
+              <a href="https://twitter.com/LiciousFoods" target = "_blank"  data-type="Twitter" class="Footerlinks"><img src="/images/twitter.png" class="twitter"></a>
+              <a href="https://www.facebook.com/LiciousFoods" target = "_blank"  data-type="Facebook" class="Footerlinks"><img src="/images/facebook.png" class="facebook"></a>
+              <a href="https://www.instagram.com/licious_foods" target = "_blank"  data-type="Instagram" class="Footerlinks"><img src="/images/insta.png" class="insta"></a>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/T&C" data-type="T&C" class="Footerlinks">T&C</a>
+          </li>
+          <li>
+            <a href="/FAQ"  data-type="FAQ" class="Footerlinks">FAQ</a>
+          </li>
+          <li>
+            <a href="/privacy-policy"  data-type="Privacy Policy" class="Footerlinks">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+      <p class="exciting-deals">EXCITING DEALS AND OFFERS ON OUR APP</P>
+        <div class="download-image"><span><a href="https://play.google.com/store/apps/details?id=com.licious&hl=en" target="_blank"  data-type="Android" class="Footerlinks"><img src="/images/google-play.png" class="google-play"></a><a href="https://itunes.apple.com/in/app/fresh-meat-online-licious/id1052440342?mt=8" target="_blank"  data-type="iOS" class="Footerlinks"><img src="/images/app-store.png" class="app-store"></a></span></div>
+        <div class="footerpopular-search"><span class="popular-search">POPULAR SEARCHES</span></div>
+        <div class="catalog-name">
+        </div>
+      </div>
+    </div>
+    <div class = "SEO">
+    </div>
+      <div class="licious-ltd"><img src="/images/copy.png" class="copy">&nbsp;2020&nbsp;<span class="gourmet-text">Delightful Gourmet Pvt Ltd. All Rights Reserved.</span></div>
+      <div class="footer-message">Licious is your one-stop fresh meat delivery shop. In here, you get nothing but the freshest meat & seafood, delivered straight to your doorstep. Now you can buy meat online anytime at your convenience. Indulge in our diverse selection: Chicken, Lamb, Seafood (Fish, Prawns, Crabs), Marinades & Cold Cuts. All our products are 100% Halal and completely natural and healthy. Once you've experienced Licious, you'll never go back to the old way of buying meat and seafood.</div>
+    </footer>
+    <div class="download-floating-bar">
+      <div class="active-order-wrapper">
+    
+        
+        
+    
+    
+        
+        
+            
+        
+        
+            
+            
+            
+            
+            
+        
+    
+</div>
+
+<script type = "text/javascript">
+   document.addEventListener('DOMContentLoaded',function(){
+       fn.msite.getActiveOrder().then(function(res){
+           var resp = JSON.parse(res);
+           // console.log('resp from promise',resp);
+           if(resp.data!=null){
+               var user_data = resp.data.user_data;
+               dataLayer.push({
+                   'user_logged_in' : true,
+                   'user_type' : user_data.customer_type,
+                   'user_first_order_date' : user_data.first_order_date,
+                   'user_last_order_date' : user_data.last_order_date,
+                   'user_total_orders' : user_data.total_orders,
+               });
+           }
+       });
+   });
+</script>      <div class="review-rating-container">
+   <div class="review-rating-wrapper rr-wrap"></div>
+</div>
+<script type = "text/javascript">
+   // document.addEventListener('DOMContentLoaded',function(){
+   //     fn.msite.getActiveOrder().then(function(res){
+   //         var resp = JSON.parse(res);
+   //         // console.log('resp from promise',resp);
+   //         if(resp.data!=null){
+   //             var user_data = resp.data.user_data;
+   //             dataLayer.push({
+   //                 'user_logged_in' : true,
+   //                 'user_type' : user_data.customer_type,
+   //                 'user_first_order_date' : user_data.first_order_date,
+   //                 'user_last_order_date' : user_data.last_order_date,
+   //                 'user_total_orders' : user_data.total_orders,
+   //             });
+   //         }
+   //     });
+   // });
+</script>      
+            <div class = "notify-alert">
+        When product is available you will be notified      
+      </div>
+      <div class="cart-item-bar">
+        <a href="/customer/cart" style="color:white" class = "cart" data-name="Cart">
+          <div>
+            <div class="cart-left">
+              <span class="numbers-item">0</span>
+              <span class="items-display">Items</span>
+            </div>
+            <div class="cart-right">checkout<img src="/images/right-arrow.png" class="cart-arrow-image"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  fn.msite.home.getSEO();
+  fn.msite.home.getPopularSearches();
+  fn.msite.home.getMobileOperatingSystem();
+  $('.download-floating-bar .appdownload').on('click',function(e){
+    e.preventDefault();
+    fn.msite.home.GAEventClick($(this),'a',$(this).data('type'));
+    window.open($(this).attr('href'),'_blank');
+  });
+
+  $('.cart-item-bar .cart').on('click',function(e){
+    e.preventDefault();
+    fn.msite.home.GAEventClick($(this),'a','ProductCount:-'+$(this).find('.numbers-item').data('ct'));
+    var flag = '';
+//    console.log('Flag',flag);
+    fn.msite.sendAnalyticsData("start_checkout",{...{"source":""},...start_checkout_obj})
+
+    if(flag!=''){
+        // console.log('footernew-allready '+flag);
+      window.location.href = $(this).attr('href');
+    }
+    else
+      {
+        // PhonePe Login
+        if(navigator.userAgent.includes('phonepe-webview')) {
+          PhonePe.PhonePe.build(PhonePe.Constants.Species.web).then((sdk) => {
+            sdk.fetchAuthToken().then((res) => {
+              fn.msite.showloader();
+              var grantToken = res.grantToken;
+              console.log('jvbsdcsad', grantToken)
+              fn.ajaxForm({
+                  'grantToken': grantToken
+              }, 'POST', '/checkout_oos/phonepe-signup')
+              .done(function (res) {
+                //console.log("phonepe res : ", res);
+                let resp = !!res ? JSON.parse(res) : "";
+                if (!!resp && resp.status == "success") {
+                  localStorage.setItem("user_name", resp.data.name);
+                  localStorage.setItem("user_email", resp.data.email);
+                  localStorage.setItem("user_contact", resp.data.phone);
+                  fn.msite.loginRedirect();
+                }
+                else {
+                  fn.msite.hideloader();
+                  $('.login-container').addClass('show');
+                  fn.noScroll();
+                  $('.login-error-msg').removeClass('hide');
+                  $('.login-error-msg').html('Oops! Something went wrong.');// TODO confirm this message
+                  $('.login-error-msg').addClass('show');
+                  setTimeout(function () {
+                    $('.login-error-msg').removeClass('show');
+                    $('.login-error-msg').addClass('hide');
+                  }, 4000);
+                }
+              })
+              .fail(function(err){
+                fn.msite.hideloader();
+                $('.login-container').addClass('show');
+                fn.noScroll();
+                $('.login-error-msg').removeClass('hide');
+                $('.login-error-msg').html('Oops! Something went wrong.');
+                $('.login-error-msg').addClass('show');
+                setTimeout(function () {
+                  $('.login-error-msg').removeClass('show');
+                  $('.login-error-msg').addClass('hide');
+                }, 4000);
+              })
+            }).catch((err) => {
+              $('.login-container').addClass('show');
+              fn.noScroll();
+            })
+          })
+        }
+        // Normal Login Flow
+        else {
+              // console.log('footernew-false'+flag);
+          $('.login-container').addClass('show');
+          fn.noScroll();
+        }
+      }
+  });
+  $('footer .Footerlinks').on('click',function(e){
+    e.preventDefault();
+    fn.msite.home.GAEventClick($('footer'),'a',$(this).data('type'));
+    window.open($(this).attr('href'),'_blank');
+  });
+  if(navigator.userAgent.includes('phonepe-webview')) {
+    $('.footer-links ul')[0].remove();
+    $('.exciting-deals').remove();
+    $('.download-image').remove();
+    $('.blog').remove();
+  }
+
+//   $('.cart').on('click', function(e) {
+//
+// });
+
+  // });
+//  $('.footer-links a').on('click',function(e){
+//    e.preventDefault();
+//    fn.msite.home.GAEventClick($(this),'a',$(this).data('type'));
+////    window.open($(this).attr('href'),'_blank');
+//  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  //code for auto referral
+      const loyaltyBanner = new HomePageBannerHandler();
+      fn.loyalty_list = fn.page_list_constants.home;
+      let isExpired = false;
+      fn.msite.home.getBanners();
+      fn.msite.home.getDeals();
+      fn.msite.home.getConfig()
+      .then((resp)=>{
+        //auto referral changes
+        //replace with API response
+        //$('#auto_ref_msg').val("Referral coupon code CB100 will be auto-applied on checkout")
+          
+        
+      if(resp.data.hasOwnProperty('referralAutoApply') && resp.data.referralAutoApply !== null && Object.keys(resp.data.referralAutoApply).length>0){
+            let {homePage, cartPage, reApplyText} = resp.data.referralAutoApply;
+            sessionStorage.setItem('auto_ref_msg',homePage)//replace with api res
+            sessionStorage.removeItem('auto_ref_msg_cart')
+            sessionStorage.setItem('auto_ref_msg_cart',cartPage)
+            //reApplyText = reApplyText.replace(/REFERRAL_CODE/g,sessionStorage.getItem('auto_ref_code'))
+            sessionStorage.removeItem('auto_ref_msg_pay')
+            sessionStorage.setItem('auto_ref_msg_pay',reApplyText)
+      }
+    })
+
+      fn.msite.home.lazyLoad();
+      loyaltyBanner.getHomePageAPIData("home")
+      .done((res)=>{
+        const resp = JSON.parse(res);
+        loyaltyBanner.handleBannerRenderCases(resp.data,'homepage');
+        isExpired = fn.validateLoyaltyExpiry(resp.data);
+        fn.populateLoyaltyBannerData(resp.data);
+        // clevertap.profile.push({
+        //       "Site": {
+        //        "member_status":fn.getMemberDataForUserProfile().member_status,
+        //        "start_date":fn.getMemberDataForUserProfile().start_date,
+        //        "end_date":fn.getMemberDataForUserProfile().end_date
+        //       }
+        //     });
+        // webengage.track("Profile (Push)", {
+        //       "member_status":fn.getMemberDataForUserProfile().member_status,
+        //       "start_date":fn.getMemberDataForUserProfile().start_date,
+        //       "end_date":fn.getMemberDataForUserProfile().end_date
+        //     });            
+        })
+
+      // fn.msite.getActiveOrder();
+      //fn.msite.home.getReviewRating();
+
+      $('.video .close').on('click',function(e){
+          e.stopImmediatePropagation();
+          $('.bannerVideo')[0].contentWindow.postMessage('{"event":"command","func":"'+'pauseVideo' +'","args":""}','*');
+          fn.msite.home.hoverBanner(null,true);
+          $('#promovid').css("display","none");
+          fn.bodyScroll();
+      });
+      document.querySelector('.homepage_loyalty_default_banner_placeholder').addEventListener('click', (e) => {
+      HomePageBannerHandler.handleBannerClick(e.target,isExpired,fn.page_list_constants.home,'click');
+      })
+      document.querySelector('.homepage_loyalty_member_banner_placeholder').addEventListener('click', (e) => {
+      HomePageBannerHandler.handleBannerClick(e.target,isExpired,fn.page_list_constants.home);
+      })
+    $('.payment-break-down .image').on('click',function() {
+        $('.payment-break-down').removeClass('show');
+    });
+
+    $('.amount-section').on('click',function() {
+        $('.payment-break-down').toggleClass('show');
+    });
+    var triggered = false;
+    var loyaltyBannerTrigger = false;
+      $(window).on('scroll',function(e){
+        e.stopImmediatePropagation(); //Don't remove this, This is to stop stack overflow of function call
+        if ($(window).scrollTop() >= $('.location').outerHeight()) {
+          $('.header-logo').addClass("fix");
+          $('.total_item').addClass("fix");
+          $('header').css('height',"140px");
+        } else {
+          $('.header-logo').removeClass("fix");
+          $('.total_item').removeClass("fix");
+          $('header').css('height',"auto");
+        }
+        var refer_banner = document.querySelector('.referrContainer');
+        var loylaty_banner = document.querySelector('.home-page-loyalty-member-banner')?document.querySelector('.home-page-loyalty-member-banner'):document.querySelector('.loyalty-non-member-banner-background')
+        if(!loyaltyBannerTrigger && loylaty_banner !== null && fn.checkElementInViewPort(loylaty_banner)){
+          loyaltyBannerTrigger = true;
+          //fn.msite.sendAnalyticsData(`${fn.page_list_constants.home}_Loyalty_Banner_impression`,{...fn.loyalty_banners_obj,...{"source":"impression"}})                 
+        }
+        // if(!loyaltyBannerTrigger && loylaty_banner !== null){
+        //     var bounding = loylaty_banner.getBoundingClientRect();
+        //     if (
+        //       bounding.top >= 0 &&
+        //       bounding.left >= 0 &&
+        //       bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        //       bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        //     ) {
+        //       //yash
+        //       var banner_attr = {
+        //         "source":"Impression",
+        //         "banner_url":localStorage.getItem("ref-ban-url") !== null ? localStorage.getItem("ref-ban-url"):"",
+        //         "banner_type":"Referral",
+        //         "position":localStorage.getItem("ref-ban-pos") !== null ? localStorage.getItem("ref-ban-pos"):"",
+        //         "list":"Home"
+        //       }
+        //       fn.msite.sendAnalyticsData('Loyalty_Banner_impression',banner_attr)
+        //       loyaltyBannerTrigger = true;
+        //     }
+        // } 
+        if(!triggered && refer_banner !== null){
+            var bounding = refer_banner.getBoundingClientRect();
+            if (
+              bounding.top >= 0 &&
+              bounding.left >= 0 &&
+              bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+              bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            ) {
+              //yash
+              var banner_attr = {
+                "source":"Impression",
+                "banner_url":localStorage.getItem("ref-ban-url") !== null ? localStorage.getItem("ref-ban-url"):"",
+                "banner_type":"Referral",
+                "position":localStorage.getItem("ref-ban-pos") !== null ? localStorage.getItem("ref-ban-pos"):"",
+                "list":"Home"
+              }
+              fn.msite.sendAnalyticsData('Banner_impression',banner_attr)
+              triggered = true;
+            }
+        }
+      });
+      $('.blog a').on('click',function(e){
+        e.preventDefault();
+        fn.msite.home.GAEventClick($(this),'a',$(this).data('name'));
+        window.location = $(this).attr('href');
+    })
+    // $(document).on('click','.track-btn',function(e) {
+    //     fn.msite.trackReload();
+    //
+    //   webengage.track('Home_Track_Order',{
+    //     'Source' : "Order",
+    //     'Screen' : "Home"
+    //   });
+    //   clevertap.event.push('Home_Track_Order',{
+    //     'Source' : "Order",
+    //     'Screen' : "Home"
+    //   });
+    //   // console.log('Home_Track_Order',{
+    //   //   'Source' : "Order",
+    //   //   'Screen' : "Home"
+    //   // });
+    //   ga('send', {
+    //     hitType: 'event',
+    //     eventCategory: "Order",
+    //     eventAction: 'Home_Track_Order',
+    //     eventLabel: ""
+    //   });
+    //
+    //     setTimeout(function() {
+    //         // console.log("home-reload")
+    //         $('.locus-wrapper').addClass('show');
+    //     },1000);
+    //
+    // });
+
+    $('.close-locus').on('click',function(e){
+        webengage.track('TrackViewClose',{
+            'Source' : "Track",
+            'Screen' : "Locus Track view Close "
+        });
+        clevertap.event.push('TrackViewClose',{
+            'Source' : "Track",
+            'Screen' : "Locus Track view Close "
+        });
+        ga('send', {
+            hitType: 'event',
+            eventCategory: "Track",
+            eventAction: 'TrackViewClose',
+            eventLabel: ""
+        });
+        $('.payment-break-down').removeClass('show');
+        $('.locus-wrapper').removeClass('show');
+    });
+
+    var window_action = window.location.href;
+    window_action = window_action.split("?");
+    window_action = window_action[1].split("=");
+    if(window_action[1] === "login"){
+        $('.login-container').addClass("show");
+    }
+})
+</script>
+<script>
+  window.onload = function(){
+    console.log("sec")
+
+    console.log({my_branch:branch_data})
+
+    if(branch_data !== null){
+            sessionStorage.removeItem('auto_ref_code')
+            if(branch_data.referral_code.code !== null && branch_data.referral_code.code !== ""){
+                fn.msite.showloader()
+                fingerprint = fn.getDeviceFingerPrint();
+                fn.ajaxForm({
+                device_id: fingerprint,
+                request_check_type:"coupon",
+                request_check_entity:branch_data.referral_code.code
+                }, 'POST', '/home/detect-fraud')
+                .done((response)=>{
+                  const resp = JSON.parse(response)
+                  if(resp.data.status === "NOT_FRAUD"){
+                    sessionStorage.setItem('auto_ref_code',branch_data.referral_code.code)
+                    sessionStorage.setItem('auto_ref_msg_pay',(sessionStorage.getItem('auto_ref_msg_pay').replace(/REFERRAL_CODE/g,sessionStorage.getItem('auto_ref_code'))))
+                    if(sessionStorage.getItem('auto_ref_code') !== null &&
+                      sessionStorage.getItem('auto_ref_code') !== "" &&
+                      sessionStorage.getItem('auto_ref_msg') !== null && 
+                      sessionStorage.getItem('auto_ref_msg') !== ""){
+                      $('.coupon_toast').css('display','block')
+                      $('.coupon_toast').html(sessionStorage.getItem('auto_ref_msg'))
+                      }
+                      else{
+                        $('.coupon_toast').css('display','none')
+                      }
+        setTimeout(() => {
+          $('.coupon_toast').css('display','none')
+        }, 8000);
+                  }
+                })
+                .fail(()=>{
+
+                })
+                .always(()=>{
+                  fn.msite.hideloader()
+                  
+                })
+            }
+          }
+  }
+</script>
+
+
+    </div>
+
+
+
+</div>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js?v=7380db0b318"></script>
+<script type="text/javascript" src="/js/checkout_1.js?v=7380db0b318"></script>
+<script type="text/javascript" src="/js/bundle.js"></script>
+<script type="text/javascript" src="/js/loyalty-plandetails.js?v=7380db0b318"></script>
+<script type="text/javascript" src="/js/loyalty-homeBanner.js?v=7380db0b318"></script>
+  <script type="text/javascript" src="/js/handle-banner-FAQ.js?v=7380db0b318"></script>  
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA864Xj0rh42-GFOqyZpi1KHpKNS_ct6Ds&libraries=places&callback=initMap"
+        async defer></script>
+
+<script type="text/javascript">
+
+    var eventObject = {};
+    function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+    }
+
+    function initClient() {
+        gapi.client.init({
+            apiKey: 'AIzaSyDlLMrblvWk_cTJPCMi3ZI2e-nu7sbzrkM',
+            discoveryDocs: ["https://people.googleapis.com/$discovery/rest?version=v1"],
+            clientId: '348450290332-raqcjag2k7ekb32t4ngsbvrslnoeq3cs.apps.googleusercontent.com',
+            scope: 'profile'
+        }).then(function () {
+            // Listen for sign-in state changes.
+            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+            // console.log("Logged: ",gapi.auth2.getAuthInstance().isSignedIn.get())
+            if(localStorage.getItem("user_onboard")==="false") {
+                //  console.log("On boarding")
+                updateSigninStatus(gapi.auth2.getAuthInstance());
+            }
+        });
+    }
+
+    function updateSigninStatus(isSignedIn) {
+//    console.log("token: ",isSignedIn.currentUser.get().getAuthResponse().id_token)
+//    console.log("Logged In: ",isSignedIn.isSignedIn.get())
+        makeApiCall(isSignedIn)
+    }
+
+    function handleSignInClick(event) {
+        // console.log("Requesting sign in...."
+        $('.whole-wrapper').removeClass('show');
+        gapi.auth2.getAuthInstance().signIn();
+    }
+
+    function makeApiCall(profile) {
+        //Access_token
+        var access_token = gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token
+        // Make an API call to the People API, and print the user's given name.
+        gapi.client.people.people.get({
+            'resourceName': 'people/me',
+            'personFields' :'names,emailAddresses,genders,coverPhotos'
+        }).then(function(response) {
+            // console.log('Hello, ' + JSON.stringify(response.result));
+            var user = {
+                id: response.result.names[0].metadata.source.id,
+                email: response.result.emailAddresses[0].value,
+                name: response.result.names[0].displayName,
+                pic: response.result.coverPhotos[0].url,
+                auth_token: access_token
+            }
+            localStorage.setItem("user_name", response.result.names[0].displayName);
+            localStorage.setItem("user_email", response.result.emailAddresses[0].value);
+            // console.log(user);
+
+            //Call Login Api
+            googleLogin(user);
+        }, function(reason) {
+            // console.log('Error: ' + reason.result.error.message)
+        });
+    }
+
+    function googleLogin(user){
+        fn.msite.showloader();
+        fn.ajaxForm(user,'POST','/home/login-using-google')
+            .done(function(res){
+                // console.log(res);
+                var resp = JSON.parse(res);
+                localStorage.setItem("social_mode","Google");
+                Object.assign(eventObject,{
+                    "Name": resp.data.name,
+                    "Email": resp.data.email,
+                    "Phone": '+91' + resp.data.phone,
+                    "Identity": resp.data.customer_key
+                });
+                if(resp.data.otp_verified == 0)
+                {
+                    // fn.msite.home.createCustomer(resp.data.customer_key,'GP')
+                    fn.msite.verifySocial(resp.data.customer_key);
+                }
+                else{
+
+                    fn.msite.createCustomer(resp.data.customer_key,'GP');
+                    fn.msite.loginRedirect()
+                }
+                //Login Customer to App
+                fn.msite.hideloader();
+            })
+    }
+    function handleSignOutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+    }
+</script>
+<script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>
+
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c2b7075667","applicationID":"194347271","transactionName":"ZgFQYUdWWkIFWkZfCV9Lc1ZBXltfS1FdWwNBBVVQ","queueTime":0,"applicationTime":24,"atts":"SkZTFw9MSUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
