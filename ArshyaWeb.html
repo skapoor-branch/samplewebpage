@@ -10,6 +10,12 @@
 	branch.init('key_live_gcRqduX27TbgBBxvqc1SLdgjBycF8YbI', function(err, data) {
     console.log(err, data);
 	});
+	  
+     branch.logEvent(
+     "SEARCH",
+     { metadata: 'abcded' },
+     function(err) { console.log(err); }
+);	  
   </script>
 </head>
 <body>
