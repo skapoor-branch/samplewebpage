@@ -7,7 +7,6 @@ width: 100%;
 padding: 0px;
 float: left;
 margin: 0px;
-
 }
 .body{
   margin: 0px;
@@ -17,21 +16,7 @@ margin: 0px;
 position: relative;
 width: 100%;
 height: 86vh;
-}
-.wrapper h3{
-    position: absolute;
-    z-index: 10;
-    top: 35.00%;
-    left: 4.67%;
-    height: 2.01%;
-    width: 60%;
-    background: #000000;
-    color: #D0EAF6;
-    padding: 0px;
-    margin: 0px;
-    font-family: Roboto;
-    font-size: medium;
-    font-weight: 50;
+z-index: 5
 }
 .wrapper a {
     position: absolute;
@@ -45,36 +30,39 @@ height: 86vh;
 position: absolute;
 width: 100%;
 padding: 0px;
-z-index: -1;
+z-index: 1;
 top: 0;
 left: 0;
 }
-
-
  </style>
-  
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
+  <script async="" src="https://cdn.branch.io/branch-latest.min.js"></script><script async="" src="https://cdn.branch.io/branch-latest.min.js"></script><script async="" src="https://cdn.branch.io/branch-latest.min.js"></script><script>
+    // load Branch
+    (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+    // init Branch
+  branch.init('key_live_gcRqduX27TbgBBxvqc1SLdgjBycF8YbI', function(err, data) {
+    console.log(err, data);
+  });
+     branch.logEvent(
+     "SEARCH",
+     { metadata: 'abcded' },
+     function(err) { console.log(err); }
+);    
+  </script>
+  <script type="text/javascript">
+    var videop=document.getElementById(video1);
+    function playvideo(){
+      videop.play();
+    }
+  </script>
 </head>
-
 <body class="body">
-
 <div class="wrapper">
     <a href="https://link.bulbul.tv/npMCxS9Bj7"></a>
   <img src="VOX_Cover.png">
-  <video controls autoplay src="BulbulGunjan.mp4" type="video/mp4">
-  </video>
-
-
-    
-    
- 
-
-      
+  <video id="video1" controls autoplay muted>
+    <source src="BulbulGunjan.mp4" type="video/mp4">
+  </video>             
 </div>
-
-
-
-
-
 </body></html>
