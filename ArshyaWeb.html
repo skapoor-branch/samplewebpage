@@ -32,10 +32,51 @@ width: 7%;
 	branch.init('key_live_gcRqduX27TbgBBxvqc1SLdgjBycF8YbI', function(err, data) {
     console.log(err, data);
 	});
-	  
+
+
+    var content_items = [
+   {
+   "$content_schema": "COMMERCE_PRODUCT",
+   "$og_title": "Nike Shoe",
+   "$og_description": "Start loving your steps",
+   "$og_image_url": "http://example.com/img1.jpg",
+   "$canonical_identifier": "nike/1234",
+   "$publicly_indexable": false,
+   "$price": 101.2,
+   "$locally_indexable": true,
+   "$quantity": 1,
+   "$sku": "1101123445",
+   "$product_name": "Runner",
+   "$product_brand": "Nike",
+   "$product_category": "Sporting Goods",
+   "$product_variant": "XL",
+   "$rating_average": 4.2,
+   "$rating_count": 5,
+   "$rating_max": 2.2,
+   "$creation_timestamp": 1499892854966,
+   "$exp_date": 1499892854966,
+   "$keywords": [ "sneakers", "shoes" ],
+   "$address_street": "230 South LaSalle Street",
+   "$address_city": "Chicago",
+   "$address_region": "IL",
+   "$address_country": "US",
+   "$address_postal_code": "60604",
+   "$latitude": 12.07,
+   "$longitude": -97.5,
+   "$image_captions": [ "my_img_caption1", "my_img_caption_2" ],
+   "$condition": "NEW",
+   "$custom_fields": {"foo1":"bar1","foo2":"bar2"}
+ }];
+
+var custom_data = {
+   "transaction_id": "tras_Id_1234",
+   "description": "Preferred purchase",
+   "registration_id": "12345"
+};
      branch.logEvent(
-     "SEARCH",
-     { metadata: 'abcded' },
+     "SEARCH",content_items,custom_data,
+     
+	     { metadata: 'abcded' },
      function(err) { console.log(err); }
 );	  
   </script>
