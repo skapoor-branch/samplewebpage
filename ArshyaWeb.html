@@ -36,11 +36,9 @@ width: 7%;
 	});
      function setID(){ branch.setIdentity('Shravil',function (err, data) {
   console.log(err, data);
-});}
-     function logout() { branch.logout(function(err, data) {
-console.log(err, data);
-});} 
-    var content_items = [
+});
+		     
+		      var content_items = [
    {
    "$content_schema": "COMMERCE_PRODUCT",
    "$og_title": "Nike Shoe",
@@ -84,14 +82,23 @@ var custom_data = {
      
 	     { metadata: 'abcded' },
      function(err) { console.log(err); }
-);	  
-  </script>
+	     
+	     
+	     }
+     function logout() { branch.logout(function(err, data) {
+console.log(err, data);
+});
+		       
+	     } 
+   
+	     
+ </script>
 </head>
 <body>
 <img src="download (1).png" id="bg" alt="" style="width:100%">
 	
-	<button onClick="setid()">Set Identity "Shravil"</button> <p id="setID"></p>
+ <button onClick="setid()">Set Identity "Shravil"</button> <p id="setID"></p>
 	
-	<button onClick="logout()">Logout </button> <p id="logout"></p>
+<button onClick="logout()">Logout </button> <p id="logout"></p>
 </body>
 </html>
